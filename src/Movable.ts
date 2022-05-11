@@ -10,7 +10,7 @@ export abstract class MovableShape implements Movable {
 
   getPoint(index: number): Point {
     if (index >= this.points.length) {
-      throw new Error(`Cannot get point ${index} on ${this.constructor.name}. Point index must be between 0 and ${this.points.length - 1}`);
+      throw new Error(`Cannot get point ${index} on ${this.constructor.name}. ${this.points.length > 1 ? ('Point index must be between 0 and ' + (this.points.length - 1)) : ''}`);
     } else {
       return this.points[index];
     }
