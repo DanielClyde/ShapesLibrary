@@ -16,7 +16,8 @@ module.exports = {
   ],
   rules: {
     'space-before-function-paren': 0,
-    semi: 0
+    semi: 0,
+    'no-useless-constructor': 0
   },
   globals: {
     describe: 'readonly',

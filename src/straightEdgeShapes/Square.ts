@@ -1,4 +1,4 @@
-import { Point } from './Point';
+import { Point } from '../Point';
 import { Rectangle } from './Rectangle';
 
 export class Square extends Rectangle {

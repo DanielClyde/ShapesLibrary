@@ -1,16 +1,12 @@
 import { Axis } from './Axis';
-import { Point } from './shapes/Point';
+import { Point } from './Point';
 
 export interface Movable {
   move: (axis: Axis, distance: number) => void;
 }
 
 export abstract class MovableShape implements Movable {
-  private points: Point[] = [];
-
-  constructor(points: Point[]) {
-    this.points = points;
-  }
+  constructor(private points: Point[]) { }
 
   getPoint(index: number): Point {
     if (index >= this.points.length) {
@@ -19,6 +15,10 @@ export abstract class MovableShape implements Movable {
       return this.points[index];
     }
   };
+
+  getPoints(): Point[] {
+    return this.points;
+  }
 
   move(axis: Axis, distance: number) {
     this.points.forEach((p) => {

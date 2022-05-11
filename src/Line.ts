@@ -1,9 +1,12 @@
-import { MovableShape } from '../Movable';
+import { MovableShape } from './Movable';
 import { Point } from './Point';
 
 export class Line extends MovableShape {
   constructor(pointA: Point, pointB: Point) {
     super([pointA, pointB]);
+    if (this.getLength() === 0) {
+      throw new Error('A Line cannot have 0 length!');
+    }
   }
 
   getLength(): number {
