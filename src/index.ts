@@ -7,6 +7,8 @@ import { Line } from './Line';
 import { Rectangle } from './straightEdgeShapes/Rectangle';
 import { Square } from './straightEdgeShapes/Square';
 import { Triangle } from './straightEdgeShapes/Triangle';
+import { Ellipse } from './ellipticalShapes/Ellipse';
+import { Circle } from './ellipticalShapes/Circle';
 
 export {
   Point,
@@ -18,5 +20,7 @@ export {
   Line,
   Rectangle,
   Square,
-  Triangle
+  Triangle,
+  Ellipse,
+  Circle
 }

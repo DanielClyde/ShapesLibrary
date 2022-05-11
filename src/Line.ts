@@ -5,7 +5,7 @@ export class Line extends MovableShape {
   constructor(pointA: Point, pointB: Point) {
     super([pointA, pointB]);
     if (this.getLength() === 0) {
-      throw new Error('A Line cannot have 0 length!');
+      throw new Error(`${this.constructor.name} cannot have a length of 0!`);
     }
   }
 
